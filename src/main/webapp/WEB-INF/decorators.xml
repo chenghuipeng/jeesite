@@ -10,3 +10,5 @@
 	<decorator name="cms_default_weixin" page="modules/cms/front/themes/weixin/layouts/default.jsp" />
 	
 </decorators>
+
+

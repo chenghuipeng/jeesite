@@ -7,11 +7,17 @@
 	<artifactId>jeesite</artifactId>
 	<version>1.2.7</version>
 	<packaging>war</packaging>
-	
+	<!-- 
+	先不要把jeestie源码导入到eclipse，打开解压后的jeesite目录，找到 jeesite-master\POM.xml文件，
+	打开，修改artifactId节点值为自己所要二次开发的项目名称（此处也可以不改，打包之后导入elipse的名称就是artifactId节点的值）。
+	 -->
 	<name>JeeSite</name>
 	<url>http://thinkgem.github.com/jeesite</url>
 	<inceptionYear>2012-2016</inceptionYear>
-	
+	<!--
+	    然后，找到jeesite.properties文件（jeesite-master\src\main\resources\jeesite.properties），
+	    修改数据库连接池等配置，根据自己的情况而定~
+	-->
 	<!-- 项目属性 -->
 	<properties>
 		
@@ -59,24 +65,20 @@
 	
 	<!-- 设定主仓库，按设定顺序进行查找。 -->
 	<repositories>
-	
 		<repository>
 			<id>jeesite-repos</id>
 			<name>Jeesite Repository</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-		</repository>
-		
+		</repository>		
 	</repositories>
 	
 	<!-- 设定插件仓库 -->
-	<pluginRepositories> 
-	
+	<pluginRepositories> 	
 		<pluginRepository>
 			<id>jeesite-repos</id>
 			<name>Jeesite Repository</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
-		</pluginRepository>
-		
+		</pluginRepository>		
 	</pluginRepositories> 
 	
 	<!-- 依赖项定义 -->
@@ -627,6 +629,10 @@
 		
 	</dependencies>
 
+
+
+
+
 	<build>
 		<outputDirectory>${project.basedir}/src/main/webapp/WEB-INF/classes/</outputDirectory>
 		<plugins>
@@ -833,6 +839,7 @@
 					<uriEncoding>${project.build.sourceEncoding}</uriEncoding>
 				</configuration>
 			</plugin>
+
 			
 			<!-- jetty插件 -->
 			<plugin>

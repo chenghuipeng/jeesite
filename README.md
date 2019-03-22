@@ -163,3 +163,187 @@ Hibernate性能上定不是问题。但对于大多数情况下，真正掌握Hi
 上述纯属个人观点，欢迎指正（thinkgem@163.com）。
 
 如果你仍然喜欢Hibernate，请点击[下载JeeSite Hibernate版本](https://github.com/thinkgem/jeesite/tree/master_hibernate)。
+
+
+
+
+
+
+
+
+ 备注：其实mvn会检测当前目录下的pom.xml文件
+
+2、还原数据库
+
+启动phpStudy的MySql服务，并确定MySql已经设置好密码。
+
+打开【C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master\src\main\resources\jeesite.properties】，修改mysql的账号密码，如下：
+
+
+
+在mysql上新建名为【jeesite】的数据库：
+
+
+
+ 
+
+回到C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master
+
+在上面的目录随便找个空白的地方，按【Shift】键+【右键】，选择【在此处打开命令窗口】
+
+在命令行窗口输入【mvn antrun:run -Pinit-db】，运行后出现如下成功提示：
+
+
+
+并打开mysql查看jeesite数据库上是否有表和数据：
+
+
+
+ 
+
+到此，数据库还原完毕。
+
+ 3、用mvn进行打包测试工程是否正常生成war包
+
+回到C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master
+
+在上面的目录随便找个空白的地方，按【Shift】键+【右键】，选择【在此处打开命令窗口】
+
+在命令行窗口输入【mvn clean package -Dmaven.test.skip=true】，出现如下提示，证明成功：
+
+
+
+最后查看此目录下是否有war文件："C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master\target\jeesite.war"
+
+4、exlipse的导入和运行
+
+前提：在【Window】->【Preferences】->【Maven】->【User Settings】设置maven的xml和目录：
+
+
+
+设置好之后，重启exlipse。
+
+1、打开exlipse，【File】->【Import】->【Maven】->【Existing Maven Projects】:
+
+
+
+【Browse】选择jeesite所在目录
+
+
+
+【Finish】导入完成。
+
+4、将项目运行在tomcat上
+
+这里假设已经环境配置好tomcat
+
+1)使用maven命令运行在tomcat上，项目->【右键】->【Run As】->【Maven build】->输入【tomcat7:run】,好了之后，浏览器输入http://127.0.0.1:8181/jeesite进行访问。
+
+
+
+2)用Run on Server运行在tomcat上
+
+ 比较关键的一步：右键【以管理员身份运行】exlipse，然后添加tomcat server:
+
+
+
+
+
+
+
+
+
+
+
+点击【Finish】之后，就会推送到“E:\开发工程\workspace_web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps”这个目录，会发现jeesite已经推送到这里。
+
+出现如下信息，代码成功：
+
+
+
+如果出现403或者500的错误，一定是上面某一步设置错误，重新开始再来一次。如果还是不行，可以参考这个方法，确定依赖已经复制过去：http://www.cnblogs.com/EasonJim/p/6691781.html
+
+或者我直接删除整个workpase，然后再导入jeesite。
+
+以下是我出现了500的错误解决：
+
+
+
+1)重装tomcat7
+
+我发觉装的时候出现了这个错误：，那么直接删除tomcat7的目录，然后命令行：【sc delete Tomcat7】，再装，成功运行。
+
+最后发觉还是不行。
+
+2)查看日志“C:\Program Files\Apache Software Foundation\logs\jeesite\jeesite.log”，发现了
+
+database错误，那么再重新进入mysql管理页面，把之前的jeesite删除，再通过上面第2步导入数据库。
+
+好消息，神奇的成功了：
+
+
+
+上面测试了用单纯的tomcat7能正常跑起来，那么就来测试以下在exlipse下是否成功，参照上面第4步进行，我发觉还是不行，我使用的release版本为1.2.6，再试一下把打的包放到tomcat的目录下，看能否正常运行。试过之后我发觉是正常的。
+
+我再回来exlipse运行项目发觉又是正常的，奇怪，难道是我在单独的tomcat上运行的问题，我再去tomcat目录下删除jeesite，再试exlipse。在exlipse上也把jeesite项目和workpace全部删除再导入试下。最后也是完全正常。
+
+ 
+
+ 
+
+超级管理员账号：thinkgem/admin
+
+资源下载：
+
+已经包含jeesite的程序包和maven全部jar包，其中maven包直接放在C:\maven
+
+链接：http://pan.baidu.com/s/1bz5IQa 密码：68o4
+
+ 
+
+1、mvn进行包的还原
+
+下载回来之后把zip包解压到桌面，我的如图所示：
+
+C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master
+
+在上面的目录随便找个空白的地方，按【Shift】键+【右键】，选择【在此处打开命令窗口】
+
+在命令行窗口输入【mvn -Declipse.workspace=%cd% eclipse:clean eclipse:eclipse】
+
+出现如下提示证明已经成功：
+
+
+ 备注：其实mvn会检测当前目录下的pom.xml文件
+
+
+
+在命令行窗口输入【mvn antrun:run -Pinit-db】，运行后出现如下成功提示：
+
+
+在命令行窗口输入【mvn clean package -Dmaven.test.skip=true】，出现如下提示，证明成功：
+
+最后查看此目录下是否有war文件："C:\Users\Jim\Desktop\jeesite-master20161117\jeesite-master\target\jeesite.war"
+
+
+这里假设已经环境配置好tomcat
+
+1)使用maven命令运行在tomcat上，项目->【右键】->【Run As】->【Maven build】->输入【tomcat7:run】,
+好了之后，浏览器输入http://127.0.0.1:8181/jeesite进行访问。
+
+2)用Run on Server运行在tomcat上
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

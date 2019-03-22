@@ -28,7 +28,7 @@
                 	<list><value>application/json;charset=UTF-8</value></list>
                 </property>
                 <property name="prettyPrint" value="false"/>
-                <property name="objectMapper">  
+                <property name="objectMapper">  <!-- Jackson,json -->
                     <bean class="com.thinkgem.jeesite.common.mapper.JsonMapper"></bean>  
                 </property> 
             </bean>
@@ -66,7 +66,10 @@
         <property name="favorPathExtension" value="true"/>
 	</bean>
 	
-	<!-- 定义视图文件解析 -->
+	<!-- 定义视图文件解析 
+	 	web.view.prefix=/WEB-INF/views/
+		web.view.suffix=.jsp 
+	-->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="${web.view.prefix}"/>
 		<property name="suffix" value="${web.view.suffix}"/>
@@ -78,7 +81,7 @@
 	<!-- 静态资源映射 -->
     <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
 	
-	<!-- 定义无Controller的path<->view直接映射 -->
+	<!-- 定义无Controller的path<->view直接映射  /a -->
 	<mvc:view-controller path="/" view-name="redirect:${web.view.index}"/>
 	
 	<!-- 拦截器配置，拦截顺序：先执行后定义的，排在第一位的最后执行。-->
@@ -91,6 +94,7 @@
 			<mvc:exclude-mapping path="${adminPath}/sys/menu/treeData"/>
 			<mvc:exclude-mapping path="${adminPath}/oa/oaNotify/self/count"/>
 			<bean class="com.thinkgem.jeesite.modules.sys.interceptor.LogInterceptor" />
+			<!-- 日志拦截器 -->
 		</mvc:interceptor>
 		<!-- 手机视图拦截器 -->
 		<mvc:interceptor>
@@ -99,6 +103,7 @@
 		</mvc:interceptor>
 	</mvc:interceptors>
 	
+	<!-- 权限控制 -->
 	<!-- 支持Shiro对Controller的方法级AOP安全控制 begin-->
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
 		<property name="proxyTargetClass" value="true" />
@@ -120,3 +125,15 @@
 	</bean>
 	
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+
