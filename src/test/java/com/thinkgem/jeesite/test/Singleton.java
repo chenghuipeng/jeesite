@@ -5,8 +5,6 @@ public class Singleton {
 
     public static void main(String[] args) {
 
-
-        max(1,11);
     }
 
     private Singleton(){}
