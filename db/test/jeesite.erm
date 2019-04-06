@@ -34,7 +34,7 @@
 		<g>255</g>
 		<b>255</b>
 	</color>
-	<font_name></font_name>
+	<font_name>.AppleSystemUIFont</font_name>
 	<font_size>9</font_size>
 	<settings>
 		<database>Oracle</database>
@@ -51,35 +51,60 @@
 		<use_bezier_curve>false</use_bezier_curve>
 		<suspend_validator>false</suspend_validator>
 		<export_setting>
-			<category_name_to_export>All</category_name_to_export>
-			<ddl_output>D:\GitHub\jeesite\db\test\jeesite_oracle.sql</ddl_output>
-			<excel_output>D:\GitHub\jeesite\jeesite\db\test\jeesite-test.xls</excel_output>
-			<excel_template>Default（English）</excel_template>
-			<image_output>D:\GitHub\jeesite\jeesite\db\test\jeesite-test.png</image_output>
-			<put_diagram_on_excel>false</put_diagram_on_excel>
-			<use_logical_name_as_sheet>false</use_logical_name_as_sheet>
-			<open_after_saved>false</open_after_saved>
-			<create_comment>true</create_comment>
-			<create_foreignKey>false</create_foreignKey>
-			<create_index>true</create_index>
-			<create_sequence>false</create_sequence>
-			<create_table>true</create_table>
-			<create_tablespace>false</create_tablespace>
-			<create_trigger>false</create_trigger>
-			<create_view>true</create_view>
-			<drop_index>false</drop_index>
-			<drop_sequence>false</drop_sequence>
-			<drop_table>true</drop_table>
-			<drop_tablespace>false</drop_tablespace>
-			<drop_trigger>false</drop_trigger>
-			<drop_view>true</drop_view>
-			<inline_column_comment>false</inline_column_comment>
-			<inline_table_comment>false</inline_table_comment>
-			<comment_value_description>false</comment_value_description>
-			<comment_value_logical_name>true</comment_value_logical_name>
-			<comment_value_logical_name_description>false</comment_value_logical_name_description>
-			<comment_replace_line_feed>false</comment_replace_line_feed>
-			<comment_replace_string></comment_replace_string>
+			<export_ddl_setting>
+				<output_path>db/test/jeesite.sql</output_path>
+				<encoding>UTF-8</encoding>
+				<line_feed>LF</line_feed>
+				<is_open_after_saved>true</is_open_after_saved>
+				<environment_id>0</environment_id>
+				<category_id>null</category_id>
+				<ddl_target>
+					<create_comment>true</create_comment>
+					<create_foreignKey>true</create_foreignKey>
+					<create_index>true</create_index>
+					<create_sequence>true</create_sequence>
+					<create_table>true</create_table>
+					<create_tablespace>true</create_tablespace>
+					<create_trigger>true</create_trigger>
+					<create_view>true</create_view>
+					<drop_index>true</drop_index>
+					<drop_sequence>true</drop_sequence>
+					<drop_table>true</drop_table>
+					<drop_tablespace>true</drop_tablespace>
+					<drop_trigger>true</drop_trigger>
+					<drop_view>true</drop_view>
+					<inline_column_comment>true</inline_column_comment>
+					<inline_table_comment>true</inline_table_comment>
+					<comment_value_description>true</comment_value_description>
+					<comment_value_logical_name>false</comment_value_logical_name>
+					<comment_value_logical_name_description>false</comment_value_logical_name_description>
+					<comment_replace_line_feed>false</comment_replace_line_feed>
+					<comment_replace_string></comment_replace_string>
+				</ddl_target>
+			</export_ddl_setting>
+			<export_excel_setting>
+				<category_id>null</category_id>
+				<output_path></output_path>
+				<template></template>
+				<template_path></template_path>
+				<used_default_template_lang></used_default_template_lang>
+				<image_output></image_output>
+				<is_open_after_saved>true</is_open_after_saved>
+				<is_put_diagram>true</is_put_diagram>
+				<is_use_logical_name>true</is_use_logical_name>
+			</export_excel_setting>
+			<export_html_setting>
+				<output_dir></output_dir>
+				<with_category_image>true</with_category_image>
+				<with_image>true</with_image>
+				<is_open_after_saved>true</is_open_after_saved>
+			</export_html_setting>
+			<export_image_setting>
+				<output_file_path></output_file_path>
+				<category_dir_path></category_dir_path>
+				<with_category_image>true</with_category_image>
+				<is_open_after_saved>true</is_open_after_saved>
+			</export_image_setting>
 			<export_java_setting>
 				<java_output></java_output>
 				<package_name></package_name>
@@ -98,7 +123,7 @@
 			<show_referred_tables>true</show_referred_tables>
 			<categories>
 				<category>
-					<id></id>
+					<id>4</id>
 					<height>685</height>
 					<width>977</width>
 						<font_name>Microsoft YaHei UI</font_name>
@@ -143,7 +168,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2013-04-23 21:13:37</creation_date>
-			<updated_date>2014-10-18 19:51:34</updated_date>
+			<updated_date>2019-04-04 17:38:58</updated_date>
 			<model_property>
 				<name>Project Name</name>
 				<value>JeeSite</value>
@@ -186,6 +211,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>归属区域</description>
 			<logical_name>归属区域</logical_name>
 			<physical_name>area_id</physical_name>
@@ -201,6 +227,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>创建者</description>
 			<logical_name>创建者</logical_name>
 			<physical_name>create_by</physical_name>
@@ -216,6 +243,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>创建时间</description>
 			<logical_name>创建时间</logical_name>
 			<physical_name>create_date</physical_name>
@@ -231,6 +259,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>删除标记（0：正常；1：删除）</description>
 			<logical_name>删除标记</logical_name>
 			<physical_name>del_flag</physical_name>
@@ -246,6 +275,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>编号</description>
 			<logical_name>编号</logical_name>
 			<physical_name>id</physical_name>
@@ -261,6 +291,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>加入日期</description>
 			<logical_name>加入日期</logical_name>
 			<physical_name>in_date</physical_name>
@@ -276,6 +307,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>名称</description>
 			<logical_name>名称</logical_name>
 			<physical_name>name</physical_name>
@@ -291,6 +323,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>归属部门</description>
 			<logical_name>归属部门</logical_name>
 			<physical_name>office_id</physical_name>
@@ -306,6 +339,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>父级编号</description>
 			<logical_name>父级编号</logical_name>
 			<physical_name>parent_id</physical_name>
@@ -321,6 +355,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>所有父级编号</description>
 			<logical_name>所有父级编号</logical_name>
 			<physical_name>parent_ids</physical_name>
@@ -336,6 +371,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>备注信息</description>
 			<logical_name>备注信息</logical_name>
 			<physical_name>remarks</physical_name>
@@ -351,6 +387,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>性别（字典类型：sex）</description>
 			<logical_name>性别</logical_name>
 			<physical_name>sex</physical_name>
@@ -366,6 +403,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>排序</description>
 			<logical_name>排序</logical_name>
 			<physical_name>sort</physical_name>
@@ -381,6 +419,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>更新者</description>
 			<logical_name>更新者</logical_name>
 			<physical_name>update_by</physical_name>
@@ -396,6 +435,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>更新时间</description>
 			<logical_name>更新时间</logical_name>
 			<physical_name>update_date</physical_name>
@@ -411,6 +451,7 @@
 			<zerofill>false</zerofill>
 			<binary>false</binary>
 			<args></args>
+			<char_semantics>false</char_semantics>
 			<description>归属用户</description>
 			<logical_name>归属用户</logical_name>
 			<physical_name>user_id</physical_name>

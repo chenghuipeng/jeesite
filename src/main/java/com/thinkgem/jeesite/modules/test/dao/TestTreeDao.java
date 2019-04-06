@@ -10,7 +10,7 @@ import com.thinkgem.jeesite.modules.test.entity.TestTree;
 /**
  * 树结构生成DAO接口
  * @author ThinkGem
- * @version 2018-12-21
+ * @version 2019-04-06
  */
 @MyBatisDao
 public interface TestTreeDao extends TreeDao<TestTree> {

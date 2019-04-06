@@ -330,3 +330,84 @@
      专利声明和其他原来作者规定需要包含的说明。
    4.如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有 Apache Licence。
      你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。
+     
+     
+     
+     
+     
+     
+	1）	UserUtils：用户工具类（获取当前用户的相关信息）。
+	2）	CacheUtils：系统级别Cache工具类。
+	3）	CookieUtils：Cookie操作工具类
+	4）	DateUtils：日期时间工具类。
+	5）	FileUtils：文件操作工具类。
+	6）	StringUtils：字符串操作工具类。
+	7）	ExcelExcel导入导出，参考用户导入导出例子。
+	8）	Reflections：Java对象操作反射工具类。
+	9）	BeanMapper：Bean与Bean，Bean与Conllection的互转
+	10）	JaxbMapper：XML与Object互转。
+	11）	JsonMapper：JSON与Object互转。
+	12）	Cryptos、Digests：密钥工具类SHA1、MD5。
+	13）	Collections3：集合对象工具类。
+	14）	Encodes：各种编码转换工具类。
+	15）	Exceptions：异常工具类。
+	16）	FreeMarkers：FreeMarkers模板工具类。
+	17）	Identities：唯一标识生成算法工具类（uuid、random）
+	18）	PropertiesLoader：属性文件操作工具类
+	19）	Threads：线程相关操作工具类。
+	     
+     
+     
+     
+     
+     
+     
+     
+     1.1.	JavaScript 组件
+1）	jQuery：强大的js框架，动态特性，AJAX、插件扩展
+2）	jQuery Validate：基于jQuery的客户端校验插件。
+3）	jBox：基于jQuery的多功能对话框插件。
+4）	zTree：基于jQuery的树结构展示查看。
+5）	My7DatePicker：日期选择控件。
+6）	treeTable：基于jQuery的表格数显示插件。
+7）	CKEditor：富文本在线HTML编辑器。
+8）	CKFinder：在线文件资源管理器。
+9）	SuperSlide：基于jQuery的滑动门插件（滑动图片,Tab,横幅等）。
+     
+     
+     
+     
+     
+     1.	界面UI、CSS、JS 
+1.	主题CSS框架：http://v2.bootcss.com/base-css.html
+2.	多功能下拉框：http://ivaynberg.github.io/select2/
+3.	界面文档（查找class，查找css）：http://www.bootcss.com/scaffolding.html
+4.	前端验证： /src/main/webapp/static/jquery-validation/1.11.0/demo/index.html
+5.	弹出对话框： /src/main/webapp/static/jquery-jbox/2.3/docs/jbox-demo.html
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
