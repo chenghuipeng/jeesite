@@ -1,4 +1,4 @@
-package com.feipeng.design.model19;
+package com.feipeng.design.StrategyPatternDemo;
 
 /**
  * @Author: 飞蓬
@@ -7,6 +7,9 @@ package com.feipeng.design.model19;
  */
 
 public interface Strategy {
+
+
+    public int doOperation(int num1, int num2);
 
 
 

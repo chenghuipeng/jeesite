@@ -1,4 +1,4 @@
-package com.feipeng.design.model16;
+package com.feipeng.design.MementoPatternDemo;
 
 /**
  * @Author: 飞蓬

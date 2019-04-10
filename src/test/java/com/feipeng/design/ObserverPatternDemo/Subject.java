@@ -1,4 +1,4 @@
-package com.feipeng.design.model17;
+package com.feipeng.design.ObserverPatternDemo;
 
 import com.google.common.collect.Lists;
 

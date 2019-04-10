@@ -1,6 +1,4 @@
-package com.feipeng.design.model17;
-
-import com.alibaba.druid.sql.visitor.functions.Bin;
+package com.feipeng.design.ObserverPatternDemo;
 
 /**
  * @Author: 飞蓬

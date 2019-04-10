@@ -1,4 +1,4 @@
-package com.feipeng.design.model17;
+package com.feipeng.design.ObserverPatternDemo;
 
 /**
  * @Author: 飞蓬
