@@ -1,6 +1,4 @@
-package com.feipeng.design.model15;
-
-import com.thinkgem.jeesite.common.supcan.common.properties.Express;
+package com.feipeng.design.InterpreterPatternDemo;
 
 /**
  * @Author: 飞蓬

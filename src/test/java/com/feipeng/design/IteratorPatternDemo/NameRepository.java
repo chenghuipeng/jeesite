@@ -1,4 +1,4 @@
-package com.feipeng.design.model13;
+package com.feipeng.design.IteratorPatternDemo;
 
 /**
  * @Author: 飞蓬

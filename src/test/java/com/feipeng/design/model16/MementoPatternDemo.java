@@ -3,6 +3,10 @@ package com.feipeng.design.model16;
 /**
  * @Author: 飞蓬
  * @Description:
+ *
+ * 备忘录模式(Memento Pattern)用来恢复一个对象的状态到以前的状态。 备忘录模式下属于行为模式的类别。
+
+ *
  * @Date:Create：in 2019/4/10 下午6:58
  */
 public class MementoPatternDemo {

@@ -1,4 +1,4 @@
-package com.feipeng.design.model14;
+package com.feipeng.design.MediatorPatternDemo;
 
 /**
  * @Author: 飞蓬
