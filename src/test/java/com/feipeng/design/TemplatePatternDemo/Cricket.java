@@ -1,4 +1,4 @@
-package com.feipeng.design.Model21;
+package com.feipeng.design.TemplatePatternDemo;
 
 /**
  * @Author: 飞蓬
