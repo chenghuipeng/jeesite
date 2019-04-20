@@ -7,7 +7,6 @@ package com.feipeng.design.TemplatePatternDemo;
  */
 public class Cricket extends Game {
 
-
     @Override
     void initialize() {
         System.out.println("Cricket Game Initialized! Start playing.");
