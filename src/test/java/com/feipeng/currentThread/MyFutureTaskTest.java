@@ -4,6 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 import org.junit.Test;
@@ -26,7 +27,14 @@ public class MyFutureTaskTest {
                 }
             }
         });
-        executorService.execute(futureTask);
+        Future future = executorService.submit(futureTask, "111111");
+        try {
+            System.out.println(future.get());
+        } catch (InterruptedException | ExecutionException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+        // executorService.execute(futureTask);
         long t = System.currentTimeMillis();
         try {
             String result = futureTask.get();
