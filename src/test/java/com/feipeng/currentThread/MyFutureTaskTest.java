@@ -12,6 +12,14 @@ import org.junit.Test;
 public class MyFutureTaskTest {
 
     @Test
+    public void name() {
+        //设置线程数量。
+        int k = Runtime.getRuntime().availableProcessors();
+        System.out.println(k);
+
+    }
+
+    @Test
     public void test2() {
 
         ExecutorService executorService = Executors.newCachedThreadPool();

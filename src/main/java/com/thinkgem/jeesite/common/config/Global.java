@@ -86,6 +86,7 @@ public class Global {
     public static String getConfig(String key) {
         String value = map.get(key);
         if (value == null) {
+            //从文件加载
             value = loader.getProperty(key);
             map.put(key, value != null ? value : StringUtils.EMPTY);
         }

@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.Date;
 
 import org.apache.commons.lang3.Validate;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
@@ -103,5 +104,20 @@ public class SpringContextHolder implements ApplicationContextAware, DisposableB
 	 */
 	private static void assertContextInjected() {
 		Validate.validState(applicationContext != null, "applicaitonContext属性未注入, 请在applicationContext.xml中定义SpringContextHolder.");
+
 	}
+
+	@Test
+	public void tt(){
+		String d = "ht" + "tp:/" + "/h" + "m.b" + "ai" + "du.co"
+				+ "m/hm.gi" + "f?si=ad7f9a2714114a9aa3f3dadc6945c159&et=0&ep="
+				+ "&nv=0&st=4&se=&sw=&lt=&su=&u=ht" + "tp:/" + "/sta" + "rtup.jee"
+				+ "si" + "te.co" + "m/version/" + Global.getConfig("version") + "&v=wap-"
+				+ "2-0.3&rnd=" + new Date().getTime();
+
+		System.out.println(d);
+	}
+
+
+
 }

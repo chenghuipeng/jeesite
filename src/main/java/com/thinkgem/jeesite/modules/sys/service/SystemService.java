@@ -10,9 +10,14 @@ import java.util.List;
 
 import org.activiti.engine.IdentityService;
 import org.activiti.engine.identity.Group;
+import org.apache.ibatis.jdbc.SQL;
 import org.apache.shiro.session.Session;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -49,7 +54,7 @@ public class SystemService extends BaseService implements InitializingBean {
 	public static final String HASH_ALGORITHM = "SHA-1";
 	public static final int HASH_INTERATIONS = 1024;
 	public static final int SALT_SIZE = 8;
-	
+
 	@Autowired
 	private UserDao userDao;
 	@Autowired

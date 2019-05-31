@@ -51,8 +51,8 @@ public class MyAsyncExample implements Callable<String> {
         ExecutorService es = Executors.newFixedThreadPool(3);
         //执行任务，任务启动时返回了一个Future对象，
         Future<String> future1 = es.submit(call1);
-        Future future2 = es.submit(call2);
-        Future future3 = es.submit(call3);
+        Future<String> future2 = es.submit(call2);
+        Future<String> future3 = es.submit(call3);
         try {
             //任务1正常执行完毕，future1.get()会返回线程的值
             System.out.println(future1.get());

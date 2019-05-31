@@ -1,13 +1,18 @@
 package com.feipeng.javaCore;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.MouseAdapter;
+import java.awt.event.WindowAdapter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.nio.charset.Charset;
 import java.util.Map;
+import java.util.Properties;
 import java.util.zip.ZipInputStream;
 
 import org.junit.Test;
+import org.springframework.transaction.TransactionDefinition;
 
 /****
  * 
@@ -19,6 +24,19 @@ import org.junit.Test;
  */
 
 public class Test11 {
+
+
+
+    {
+
+        WindowAdapter windowAdapter;
+        KeyAdapter keyAdapter;
+        MouseAdapter mouseAdapter;
+
+        TransactionDefinition transactionDefinition;
+    }
+
+
 
     public static void main(String[] args) {
 
@@ -70,11 +88,39 @@ public class Test11 {
         else
             return n + sum(n - 1);
     }
+    @Test
+    public void Test3()
+    {
+        Properties properties = new Properties();
+        properties.put("key1",11);
+        properties.put("key2",22);
+        properties.put("key3",33);
+        properties.put("key4",44);
+        System.out.println(properties);
 
-    //    public int fib(int n) {
-    //
-    //        // if(n==00)
-    //
-    //    }
+
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

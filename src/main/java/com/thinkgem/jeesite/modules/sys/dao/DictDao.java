@@ -18,5 +18,8 @@ import com.thinkgem.jeesite.modules.sys.entity.Dict;
 public interface DictDao extends CrudDao<Dict> {
 
 	public List<String> findTypeList(Dict dict);
+
+
+
 	
 }

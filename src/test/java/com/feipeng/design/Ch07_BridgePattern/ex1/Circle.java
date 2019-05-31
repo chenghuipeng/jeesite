@@ -1,0 +1,61 @@
+package com.feipeng.design.Ch07_BridgePattern.ex1;
+
+
+
+
+
+
+public class Circle extends Shape {
+
+    private int x, y, radius;
+
+
+    public Circle(DrawAPI drawAPI, int x, int y, int radius) {
+        super(drawAPI);
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        drawAPI.drawCircle(radius, x, y);
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

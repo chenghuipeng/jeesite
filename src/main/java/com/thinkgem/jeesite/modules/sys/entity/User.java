@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
+import org.apache.ibatis.session.TransactionIsolationLevel;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
@@ -51,7 +52,9 @@ public class User extends DataEntity<User> {
 	private Date oldLoginDate;	// 上次登陆日期
 	
 	private Role role;	// 根据角色查询用户条件
-	
+
+
+
 	private List<Role> roleList = Lists.newArrayList(); // 拥有角色列表
 
 	public User() {
